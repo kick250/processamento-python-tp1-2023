@@ -1,4 +1,6 @@
 def print_message():
   print("O melhor curso do mundo!!!")
 
-print_message()
+
+if __name__ == "__main__":
+  print_message()
