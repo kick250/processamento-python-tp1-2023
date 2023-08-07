@@ -1,0 +1,85 @@
+TP1 - Python para Processamento de Dados
+
+-------------------------------------------------------------------------------
+
+Exercício 1
+
+Escreva uma função chamada apresenta_mensagem que imprima uma frase dizendo o que você está achando de programar em Python.
+
+Chame a função e certifique-se de que a mensagem seja exibida corretamente.
+
+-------------------------------------------------------------------------------
+
+Exercício 2
+Escreva uma função chamada livro_favorito que aceite um parâmetro, o título de um livro. A função deve imprimir uma mensagem como "Um dos meus livros favoritos é <título>".
+
+Chame a função pelo menos 2 vezes, certificando-se de incluir um título de livro diferente como argumento em cada chamada da função.
+
+-------------------------------------------------------------------------------
+
+Exercício 3
+Escreva uma função chamada faz_camiseta que aceite um tamanho e o texto de uma mensagem que deve ser impressa na camiseta. A função deve imprimir uma frase descrevendo o tamanho da camiseta e a mensagem impressa nela.
+
+Chame a função uma vez usando argumentos posicionais para fazer uma camiseta.
+
+Chame a função uma 2ª vez usando argumentos keyword.
+
+-------------------------------------------------------------------------------
+
+Exercício 4
+Reescreva a função faz_camiseta (do Exercício 3) para que, por padrão, as camisetas sejam grandes e tenham a mensagem "I ♡ Python".
+
+Faça uma camiseta grande e uma camiseta média com a mensagem padrão, e uma camiseta de qualquer tamanho com uma mensagem diferente.
+
+-------------------------------------------------------------------------------
+
+Exercício 5
+Escreva uma função chamada cidade_pais que receba os nomes de uma cidade e seu país separadamente. A função deve retornar uma string formatada como no exemplo abaixo:
+
+"Santiago, Chile"
+
+Chame sua função com pelo menos três pares cidade-país e imprima os valores retornados.
+
+-------------------------------------------------------------------------------
+
+Exercício 6
+Analise o código no arquivo main.py para entender o funcionamento da função f.
+
+Documente a função f usando uma "string de documentação" (docstring). Sua documentação deve especificar:
+
+O significado de cada parâmetro e o tipo esperado do argumento correspondente.
+O que a função faz.
+O que a função retorna e o tipo do valor retornado.
+Inclua no programa uma chamada à função help para apresentar a documentação da função f.
+
+-------------------------------------------------------------------------------
+
+Exercício 7
+O pequeno Mirko gosta de digitar e muitas vezes fica entediado durante as aulas, e é por isso que seu professor lhe deu uma tarefa.
+
+Mirko deve redigitar um livro que contém N frases separadas por espaços. Neste livro, uma frase é uma sequência de uma ou mais palavras separadas por espaços, onde apenas o último caractere da última palavra é um sinal de pontuação (".", "?" ou "!"). O restante das palavras não contém sinais de pontuação.
+
+Palavras são sequências de caracteres, letras minúsculas ou maiúsculas do alfabeto (sem acentos), ou dígitos ou, excepcionalmente, um sinal de pontuação no final da última palavra da frase.
+
+Embora goste de digitar frases, Mirko não gosta de digitar nomes. Um nome é uma palavra que começa com uma letra maiúscula do alfabeto, enquanto o restante dos caracteres são letras minúsculas do alfabeto, exceto o último caractere, que pode ser um sinal de pontuação. Antes de decidir redigitar tudo, Mirko quer saber quantos nomes há em cada frase do livro. Escreva um programa para ajudá-lo!
+
+⚠️Observação: seu programa deve definir e usar funções apropriadas para a resolução do problema.
+
+Especificação da entrada
+Uma string contendo as N frases do livro.
+Especificação da saída
+Apresente N linhas. A iª linha deve conter o nº de nomes na iª frase do livro.
+
+Exemplos
+Entrada	Saída
+Spavas li Mirno del Potro Juan martine?	4
+An4 voli Milovana. Ana nabra par Banana.	1
+2
+
+-------------------------------------------------------------------------------8
+
+
+-------------------------------------------------------------------------------9
+
+
+-------------------------------------------------------------------------------10
