@@ -32,10 +32,14 @@ def count_names_from_sentence(sentence):
   return len(tuple(filter(is_name, words)))
 
 def main():
-  full_sentence = "An4 voli Milovana. Ana nabra, par Banana."
-  results = count_names(full_sentence)
-  for result in results:
+  sentence = "Spavas li Mirno del Potro Juan martine?" # 4
+  for result in count_names(sentence):
     print(result)
+
+  sentence = "An4 voli Milovana. Ana nabra par Banana." #	1 2?
+  for result in count_names(sentence):
+    print(result)
+
 
 if __name__ == "__main__":
   main()
