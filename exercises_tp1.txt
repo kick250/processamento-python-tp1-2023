@@ -76,10 +76,85 @@ Spavas li Mirno del Potro Juan martine?	4
 An4 voli Milovana. Ana nabra par Banana.	1
 2
 
--------------------------------------------------------------------------------8
+-------------------------------------------------------------------------------
 
+Exercício 8
+Um poema simples consiste em quatro linhas. Cada linha consiste em uma ou mais palavras compostas por letras maiúsculas ou minúsculas, ou uma combinação de letras maiúsculas e minúsculas. Palavras adjacentes em uma linha são separadas por um único espaço.
 
--------------------------------------------------------------------------------9
+Definimos a última sílaba de uma palavra (em Inglês) como a sequência de letras da última vogal ("a", "e", "i", "o" ou "u") até o final da palavra. Se uma palavra não tem vogal, então a última sílaba é a própria palavra. Dizemos que 2 linhas rimam se suas últimas sílabas forem iguais, ignorando maiúsculas e minúsculas.
 
+Vocês devem classificar a forma de rima em um poema. A forma da rima pode ser perfeita, par, cruzada, concha ou livre:
 
--------------------------------------------------------------------------------10
+- rima perfeita: as 4 linhas do poema rimam
+- rima par: as 2 primeiras linhas rimam e as 2 últimas linhas rimam
+- rima cruzada: a 1ª e a 3ª linhas rimam, assim como a 2ª e a 4ª
+- rima concha: a 1ª e a 4ª linhas rimam, assim como a 2ª e a 3ª
+- rima livre: qualquer forma que não seja perfeita, par, cruzada ou concha.
+
+⚠️**Observação:** seu programa deve definir e usar funções apropriadas para a resolução do problema.
+
+## Especificação da entrada
+- 4 strings, as linhas do poema.
+
+## Especificação da saída
+- A forma de rima do poema (**perfeita**, **par**, **cruzada**, **concha** ou **livre**).
+
+## Exemplos
+| Entrada | Saída |
+| ----------- | ----------- |
+| One plus one is small<br>one hundred plus one is not<br>you might be very tall<br>but summer is not | cruzada |
+| I say to you boo<br>You say boohoo<br>I cry too<br>It is too much foo | perfeita |
+| Your teacher has to mark<br>and mark and mark and teach<br>To do well on this contest you have to reach<br>for everything with a lark | concha |
+| It seems though<br>that without some dough<br>creating such a bash<br>is a weighty in terms of cash | par |
+| But how I see<br>the problem so fair<br>is to write subtle verse<br>with hardly a rhyme | livre
+
+-------------------------------------------------------------------------------
+
+Exercício 9
+Ana e suas amigas estão fazendo um trabalho de geometria para o colégio, em que precisam formar vários triângulos, numa cartolina, com algumas varetas de comprimentos diferentes. Logo elas perceberam que não dá para formar triângulos com três varetas de comprimentos quaisquer: se uma das varetas for muito grande em relação às outras duas, não dá para formar o triângulo.
+
+Neste problema, vocês precisam ajudar Ana e suas amigas a determinar se, dados os comprimentos de quatro varetas, é ou não é possível selecionar três varetas, dentre as quatro, e formar um triângulo.
+
+⚠️**Observação:** seu programa deve definir e usar funções apropriadas para a resolução do problema.
+
+*Caso não se lembrem qual é a condição de existência de um triângulo, assistam ao vídeo em:* https://youtu.be/Xt1T35-JWoc?t=29
+
+## Especificação da entrada
+- 4 números inteiros.
+
+## Especificação da saída
+- "S" caso seja possível formar um triângulo, ou "N" caso não seja.
+
+## Exemplos
+| Entrada | Saída |
+| ----------- | ----------- |
+| 6<br>9<br>22<br>15 | S |
+| 14<br>40<br>12<br>60 | N |
+
+-------------------------------------------------------------------------------
+
+Exercício 10
+Martin e Isa estão se mudando para uma nova.
+
+A energia elétrica é muito cara, e eles querem manter tudo sob controle. Por isso Martin propôs que mantivessem um histórico diário de quanta eletricidade foi consumida na casa. Eles têm um marcador de eletricidade, que mostra o número de KWh consumidos desde sua chegada.
+
+No começo de cada dia eles consultam o marcador de eletricidade, e anotam o consumo. Alguns dias Martin faz isso, em outros é a Isa quem faz. Desse jeito, eles conseguirão observar as diferenças de consumo entre dias consecutivos e saber quanto foi gasto.
+
+Mas alguns dias eles simplesmente esqueceram de anotar. Então, depois de muito tempo, o histórico está incompleto. Eles têm uma lista de datas e consumos, mas nem todas as datas são consecutivas. Eles só querem levar em conta os dias para os quais o consumo pode ser determinado precisamente, e precisam de ajuda.
+
+⚠️**Observação:** seu programa deve definir e usar funções apropriadas para a resolução do problema.
+
+## Especificação da entrada
+- 1 linha contendo um inteiro *N* indicando o nº de medições que eles fizeram.
+- *N* linhas contendo, cada uma, uma data no formato dd/mm/aaaa e o consumo lido no início daquele dia.
+- Essas *N* linhas estão ordenadas em ordem crescente e **podem incluir anos bissextos**.
+
+## Especificação da saída
+- O nº de dias para os quais o consumo pode ser determinado precisamente e o consumo total desses dias.
+
+## Exemplos
+| Entrada | Saída |
+| ----------- | ----------- |
+| 5<br>09/09/1979 440<br>29/10/1979 458<br>30/10/1979 470<br>01/11/1979 480<br>02/11/1979 483 | 2 dia(s)<br>15 KWh |
+| 3<br>05/05/2000 6780<br>06/05/2001 7795<br>07/05/2002 8201 | 0 dia(s)<br>0 KWh |
+| 8<br>28/02/1978 112<br>01/03/1978 113<br>28/02/1980 220<br>01/03/1980 221<br>05/11/1980 500<br>14/11/2008 600<br>15/11/2008 790<br>16/12/2008 810 | 2 dia(s)<br>191 KWh |
