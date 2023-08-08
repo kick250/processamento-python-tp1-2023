@@ -12,7 +12,7 @@ def is_name(word):
 def remove_empty_strings(sentences):
   def not_empty(sentence):
     return len(sentence.strip()) != 0
-  return list(filter(not_empty, sentences))
+  return tuple(filter(not_empty, sentences))
 
 def count_names(full_sentence):
   sentences = get_sentences(full_sentence)
@@ -24,7 +24,7 @@ def count_names(full_sentence):
 def get_sentences(string_with_senteses):
   DELEMITERS_REGEXP = r'[.?!]'
   sentences = re.split(DELEMITERS_REGEXP, string_with_senteses)
-  return remove_empty_strings(sentences)
+  return tuple(map(str.strip, remove_empty_strings(sentences)))
 
 def count_names_from_sentence(sentence):
   words = sentence.split(" ")
@@ -32,11 +32,7 @@ def count_names_from_sentence(sentence):
   return len(tuple(filter(is_name, words)))
 
 def main():
-  sentence = "Spavas li Mirno del Potro Juan martine?" # 4
-  for result in count_names(sentence):
-    print(result)
-
-  sentence = "An4 voli Milovana. Ana nabra par Banana." #	1 2?
+  sentence = input("Digite a frase: ") # 4
   for result in count_names(sentence):
     print(result)
 

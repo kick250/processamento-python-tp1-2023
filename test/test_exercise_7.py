@@ -9,10 +9,10 @@ def test_count_names_from_sentence():
 def test_get_sentences():
   sentences = exercise_7.get_sentences("An4 voli Milovana. Ana nabra par Banana.")
   assert len(sentences) == 2
-  assert sentences == [
-    "An4 voli Milovana.",
-    "Ana nabra par Banana."
-  ]
+  assert sentences == (
+    "An4 voli Milovana",
+    "Ana nabra par Banana"
+  )
 
 def test_execute_with_1_sentences():
   result = exercise_7.count_names("Ana nabra par Banana.")
@@ -20,7 +20,4 @@ def test_execute_with_1_sentences():
 
 def test_execute_with_2_sentences():
   result = exercise_7.count_names("An4 voli Milovana. Ana nabra par Banana.")
-  assert result == [2, 2]
-
-def test_main():
-  spec.expect_print(exercise_7.main, "4\n2\n2\n")
+  assert result == [1, 2]
