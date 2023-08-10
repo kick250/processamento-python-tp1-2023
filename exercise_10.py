@@ -42,7 +42,7 @@ def calculate_spent(consecutive_metrics):
       consecutive_spents_index += 1
       consecutive_spents.append([metric.value])
 
-  spents = [sum(spents_consecutive) for spents_consecutive in consecutive_spents]
+  spents = [sum((spents_consecutive[0], spents_consecutive[-1])) for spents_consecutive in consecutive_spents]
 
   return sum(spents) * -1
 
