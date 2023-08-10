@@ -31,9 +31,28 @@ def get_consecutive_metrics(metrics):
 
   return consecutive_metrics
 
-
 def calculate_spent(consecutive_metrics):
-  pass
+  consecutive_spents_index = -1
+  consecutive_spents = []
+
+  for metric in consecutive_metrics:
+    if metric.has_day_before:
+      consecutive_spents[consecutive_spents_index].append(metric.value * -1)
+    else:
+      consecutive_spents_index += 1
+      consecutive_spents.append([metric.value])
+
+  spents = [sum(spents_consecutive) for spents_consecutive in consecutive_spents]
+
+  return sum(spents) * -1
+
+def count_valid_days(consecutive_metrics):
+  quantity = 0
+
+  for metric in consecutive_metrics:
+    if metric.has_day_before: quantity += 1
+
+  return quantity
 
 def main():
   input_quantity = int(input("Diga o nº de medições: "))
@@ -45,9 +64,10 @@ def main():
     )
 
   consecutive_metrics = get_consecutive_metrics(metrics)
-  spent_values = calculate_spent(consecutive_metrics)
+  spent = calculate_spent(consecutive_metrics)
+  valid_days = count_valid_days(consecutive_metrics)
 
-  print(f"{len(spent_values)} dia(s)\n{sum(spent_values)} KWh")
+  print(f"{valid_days} dia(s)\n{spent} KWh")
 
 
 if __name__ == "__main__":

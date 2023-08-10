@@ -35,4 +35,38 @@ def test_get_consecutive_metrics():
 
 
 def test_calculate_spent():
-  pass
+  metric1 = exercise_10.build_metric("09/09/1979 440")
+  metric2 = exercise_10.build_metric("29/10/1979 458")
+  metric3 = exercise_10.build_metric("30/10/1979 470")
+  metric4 = exercise_10.build_metric("01/11/1979 480")
+  metric5 = exercise_10.build_metric("02/11/1979 483")
+  metrics = [
+    metric1,
+    metric2,
+    metric3,
+    metric4,
+    metric5
+  ]
+
+  consecutive_metrics = exercise_10.get_consecutive_metrics(metrics)
+
+  spent = exercise_10.calculate_spent(consecutive_metrics)
+  assert spent == 15
+
+def test_count_valid_days():
+  metric1 = exercise_10.build_metric("09/09/1979 440")
+  metric2 = exercise_10.build_metric("29/10/1979 458")
+  metric3 = exercise_10.build_metric("30/10/1979 470")
+  metric4 = exercise_10.build_metric("01/11/1979 480")
+  metric5 = exercise_10.build_metric("02/11/1979 483")
+  metrics = [
+    metric1,
+    metric2,
+    metric3,
+    metric4,
+    metric5
+  ]
+
+  consecutive_metrics = exercise_10.get_consecutive_metrics(metrics)
+  valid_days = exercise_10.count_valid_days(consecutive_metrics)
+  assert valid_days == 2
